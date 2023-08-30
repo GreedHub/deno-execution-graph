@@ -1,4 +1,4 @@
-import ChainStep from "./chain-node.ts";
+import ChainStep from "./chain-step.ts";
 
 type NumericData = {
     value: number

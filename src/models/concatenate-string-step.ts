@@ -1,11 +1,11 @@
-import ChainStep from "./chain-node.ts";
+import ChainStep from "./chain-step.ts";
 
 type StringData = {
     value: string
 }
 
 class ConcatenateString implements ChainStep<StringData>{
-    name = 'AddOne';
+    name = 'ConcatenateString';
     value :string
 
     constructor(value:string){

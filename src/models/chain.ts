@@ -1,29 +1,38 @@
-import ChainStep from "./chain-node.ts";
+import ChainStep, {ExecutionData} from "./chain-step.ts";
 
-export type ExecutionTime = {
-    timeElapsedMS: number
-    functionName: string
-}
+
 
 export default class Chain<T> {
     private steps: ChainStep<T>[]
-    readonly execTime: ExecutionTime[]
+    readonly execData: ExecutionData<T>[]
     readonly initialValue: T
     readonly data:T
+    private debug: boolean
 
-    constructor(data:T){
+    constructor(data:T,debug=false){
         this.steps = []
-        this.execTime = []
-        this.initialValue = data
-        this.data = data
+        this.execData = []
+        this.initialValue = this.deepCopy(data)
+        this.data = this.deepCopy(data)
+        this.debug = debug
+    }
+
+    deepCopy(obj:T):T{
+        /* Fixme: this is unsafe as it would break with a circular reference object */
+        return JSON.parse(JSON.stringify(obj)) as typeof obj;
     }
 
     execute(): T{
         this.steps.forEach((step:ChainStep<T>)=>{
+
             const timePrev = performance.now()
+            /* Fixme, change the second parameter to be something like next() function in express in order to enable async functions */
             step.handle(this.data,()=>{})
             const timePost = performance.now()
-            this.execTime.push({timeElapsedMS: timePost-timePrev,functionName:step.name})
+
+            const valueAtStep = this.debug ? this.deepCopy(this.data) : undefined
+
+            this.execData.push({timeElapsedMS: timePost-timePrev,functionName:step.name, valueAtStep})
         })
 
         return this.data
