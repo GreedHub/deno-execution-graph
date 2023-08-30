@@ -30,6 +30,9 @@ chain.AddStep(
   new AddOne(),
   new AddTwo(),
 )
+
+/* Finally the chain is executed */
+chain.execute()
 ```
 
 ### Output
