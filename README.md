@@ -40,7 +40,7 @@ chain.execute()
 
 ```js
 {
-  data: { value: "7" },
+  data: { value: 7 },
   initialValue: { value: 0 },
   execData: [
     {
