@@ -15,7 +15,10 @@ It's ok, this was made in a couple of minutes just to poke around the idea, I'll
 ### Code
 
 ```js
-/* We create a new chain with an object that has only a property with a numeric value */
+/* 
+  We create a new chain with an object that has
+  only a property with a numeric value 
+*/
 const chain = new Chain({ value : 0 })
 
 /* Then we add compatible steps to the chain */
