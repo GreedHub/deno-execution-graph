@@ -1,6 +1,6 @@
 ## What's this? 🎃
 
-A quick PoC to the idea of having a chain of responsability pattern on Deno with statistics reporting for every step.
+A quick PoC to the idea of having a chain of responsability pattern on Deno with statistics reporting in every step.
 
 ## Why? 🤔
 
