@@ -12,48 +12,55 @@ It's ok, this was made in a couple of minutes just to poke around the idea, I'll
 
 ## Sample execution output
 
-```json
+```js
 
 {
   data: { value: "7this should not work because of different types" },
-  initialValue: { value: 0 },
   execData: [
     {
-      timeElapsedMS: 0.007779999999998566,
+      timeElapsedMS: 0.008070000000000022,
       functionName: "AddOne",
-      valueAtStep: { value: 1 }
+      valueAtStep: { value: 1 },
+      stepNumber: 1
     },
     {
-      timeElapsedMS: 0.0011399999999994748,
+      timeElapsedMS: 0.0010900000000013677,
       functionName: "AddOne",
-      valueAtStep: { value: 2 }
+      valueAtStep: { value: 2 },
+      stepNumber: 2
     },
     {
-      timeElapsedMS: 0.0008999999999996788,
+      timeElapsedMS: 0.0008599999999994168,
       functionName: "AddOne",
-      valueAtStep: { value: 3 }
+      valueAtStep: { value: 3 },
+      stepNumber: 3
     },
     {
-      timeElapsedMS: 0.0007900000000002905,
+      timeElapsedMS: 0.0008299999999987762,
       functionName: "AddOne",
-      valueAtStep: { value: 4 }
+      valueAtStep: { value: 4 },
+      stepNumber: 4
     },
     {
-      timeElapsedMS: 0.007181000000000992,
+      timeElapsedMS: 0.009770000000001389,
       functionName: "AddOne",
-      valueAtStep: { value: 5 }
+      valueAtStep: { value: 5 },
+      stepNumber: 5
     },
     {
-      timeElapsedMS: 0.005129999999999413,
+      timeElapsedMS: 0.005029999999999646,
       functionName: "AddTwo",
-      valueAtStep: { value: 7 }
+      valueAtStep: { value: 7 },
+      stepNumber: 6
     },
     {
-      timeElapsedMS: 0.022370999999999697,
+      timeElapsedMS: 0.005179999999999296,
       functionName: "ConcatenateString",
-      valueAtStep: { value: "7this should not work because of different types" }
+      valueAtStep: { value: "7this should not work because of different types" },
+      stepNumber: 7
     }
-  ]
+  ],
+  initialValue: { value: 0 }
 }
 
 ```

@@ -23,7 +23,7 @@ export default class Chain<T> {
     }
 
     execute(): T{
-        this.steps.forEach((step:ChainStep<T>)=>{
+        this.steps.forEach((step:ChainStep<T>,i:number)=>{
 
             const timePrev = performance.now()
             /* Fixme, change the second parameter to be something like next() function in express in order to enable async functions */
@@ -32,7 +32,7 @@ export default class Chain<T> {
 
             const valueAtStep = this.debug ? this.deepCopy(this.data) : undefined
 
-            this.execData.push({timeElapsedMS: timePost-timePrev,functionName:step.name, valueAtStep})
+            this.execData.push({timeElapsedMS: timePost-timePrev,functionName:step.name, valueAtStep, stepNumber: i+1})
         })
 
         return this.data

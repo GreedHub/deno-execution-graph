@@ -6,5 +6,6 @@ export default interface ChainStep<T>{
 export type ExecutionData<T> = {
     timeElapsedMS: number
     functionName: string
+    stepNumber: number
     valueAtStep?: T
 }
