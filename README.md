@@ -15,7 +15,7 @@ It's ok, this was made in a couple of minutes just to poke around the idea, I'll
 ```js
 
 {
-  data: { value: "7this should not work because of different types" },
+  data: { value: "7" },
   execData: [
     {
       timeElapsedMS: 0.008070000000000022,
@@ -53,12 +53,6 @@ It's ok, this was made in a couple of minutes just to poke around the idea, I'll
       valueAtStep: { value: 7 },
       stepNumber: 6
     },
-    {
-      timeElapsedMS: 0.005179999999999296,
-      functionName: "ConcatenateString",
-      valueAtStep: { value: "7this should not work because of different types" },
-      stepNumber: 7
-    }
   ],
   initialValue: { value: 0 }
 }
