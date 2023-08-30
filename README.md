@@ -16,6 +16,7 @@ It's ok, this was made in a couple of minutes just to poke around the idea, I'll
 
 {
   data: { value: "7" },
+  initialValue: { value: 0 },
   execData: [
     {
       timeElapsedMS: 0.008070000000000022,
@@ -53,8 +54,7 @@ It's ok, this was made in a couple of minutes just to poke around the idea, I'll
       valueAtStep: { value: 7 },
       stepNumber: 6
     },
-  ],
-  initialValue: { value: 0 }
+  ]
 }
 
 ```
