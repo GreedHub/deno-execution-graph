@@ -17,9 +17,10 @@ It's ok, this was made in a couple of minutes just to poke around the idea, I'll
 ```js
 /* 
   We create a new chain with an object that has
-  only a property with a numeric value 
+  only a property with a numeric value and
+  debugging enabled
 */
-const chain = new Chain({ value : 0 })
+const chain = new Chain({ value : 0 }, true)
 
 /* Then we add compatible steps to the chain */
 chain.AddStep(
